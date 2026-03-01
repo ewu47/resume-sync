@@ -1,0 +1,186 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\bullet$}
+\renewcommand{\labelitemiii}{$\bullet$}
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Edward Wu} \\ \vspace{1pt}
+    \small 919-302-8394 $|$ \href{mailto:emwu@uchicago.edu}{\underline{emwu@uchicago.edu}} $|$ 
+    \href{https://www.linkedin.com/in/edward-minghao-wu/}{\underline{LinkedIn}} $|$
+    Chicago, IL
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {The University of Chicago}{Chicago, IL}
+      {B.S. Computer Science, B.A. Statistics | GPA: 3.56/4.00}{Sep 2024 -- Jun 2028}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework:} Theory of Algorithms, Databases, Systems Programming, Discrete Mathematics}
+        \resumeItem{\textbf{Financial Markets Program:} Selective three-year program focused on quantitative finance acumen through experiential workshops, mentorship, and coursework at Chicago Booth.}
+        \resumeItem{\textbf{Involvement:} Maroon Capital (Analyst), Sports Analytics Group (WebMaster), Maroon Capital Ventures (Associate Partner), Kappa Theta Pi, College IT (Part-Time Computer Assistant)}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {SAS}{Cary, NC}
+      {Incoming Software Developer and Testing Intern}{May 2026 -- Aug 2026}
+      \resumeItemListStart
+        \resumeItem{Incoming intern for the Flow Team, responsible for a core piece of the SAS Studio web application on SAS Viya.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {North Carolina Football Club}{Cary, NC}
+      {Part-Time Data Analyst}{Jul 2025 -- Oct 2025}
+      \resumeItemListStart
+        \resumeItem{Analyzed 30,000+ entries of StatSports GPS data for 25+ professional athletes using \textbf{Python} and \textbf{R}.}
+        \resumeItem{Engineered and structured a \textbf{PostgreSQL} database to centralize and query player performance metrics.}
+        \resumeItem{Automated performance trend reporting for training and matches, reducing manual analysis time by \textbf{80\%}.}
+        \resumeItem{Delivered weekly data-driven visualizations via \textbf{Plotly}, \textbf{ggplot2}, and \textbf{Excel} to inform coaching staff decisions.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Fire CV} $|$ \emph{Three.js, React Three Fiber, TypeScript, Azure OpenAI API}}{Jan 2026}
+          \resumeItemListStart
+            \resumeItem{Developed a 3D fire safety system placing \textbf{2nd out of 100+ teams} at Nexhacks, ultilizing real-time navigation.}
+            \resumeItem{Generated building-specific evacuation scenarios and feedback loops using \textbf{OpenAI Azure API}.}
+            \resumeItem{Integrated Overshoot (YC W 26) API vision metadata to sync 3D model coordinates with indoor localization data.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Divvy Data Analysis} $|$ \emph{PostgreSQL, SQL, React, TypeScript, Tableau}}{Jun 2025}
+          \resumeItemListStart
+            \resumeItem{Managed and queried over \textbf{5,000,000 records} of Chicago Divvy bike trip data using a \textbf{PostgreSQL} database.}
+            \resumeItem{Developed an interactive front-end \href{https://ewu47.github.io/Wu-Viz/}{\underline{website}} using \textbf{React} and \textbf{TypeScript} to visualize usage findings.}
+            \resumeItem{Conducted extensive ETL processes to standardize raw trip data for seasonal trend analysis.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Automated Stock Trading Bot} $|$ \emph{Python, Alpaca API, WebSockets}}{Mar 2025}
+          \resumeItemListStart
+            \resumeItem{Developed an asynchronous algorithmic trading system to automate stock trades based on live market data.}
+            \resumeItem{Built real-time data streaming infrastructure using \textbf{WebSocket} connections to execute instant trades.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------LEADERSHIP-----------
+\section{Leadership \& Activities}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+        {University of Chicago Sports Analytics Group}{Chicago, IL}
+        {Webmaster}{Dec 2025 -- Present}
+        \resumeItemListStart
+            \resumeItem{Solely developed the official organization \href{https://www.uchicagosportsanalytics.com}{\underline{website}} with TypeScript/React, deployed on Vercel.}
+        \resumeItemListEnd
+    \resumeSubheading
+      {UChicago Varsity Men's Soccer}{Chicago, IL}
+      {NCAA Division III Student-Athlete}{Aug 2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{Earned All-American 4th Team, All-Region 1st Team, All-Conference 1st Team, and All-District academic honors.}
+        \resumeItem{Balancing 25+ hours/week while being a leadership council member and the Order of the "C" representative.}
+      \resumeItemListEnd
+    
+    
+
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills \& Interests}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, TypeScript, JavaScript, SQL, Rust, C, R, HTML/CSS, Assembly} \\
+     \textbf{Frameworks/Tools}{: Git, React, Pandas, NumPy, scikit-learn, Docker, AWS} \\
+     \textbf{Databases}{: PostgreSQL, MongoDB, Supabase} \\
+     \textbf{Interests}{: Music Producer (wuhoo on Spotify), Chess, Video Editing, Watching Sports}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
