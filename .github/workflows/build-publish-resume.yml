@@ -1,0 +1,31 @@
+name: Build & Publish Resume
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout LaTeX source
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+
+      - name: Push file to resume repo
+        run: |
+          git clone https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/ewu47/resume.git target-repo
+          cp main.pdf target-repo/resume.pdf
+          cd target-repo
+
+          git config user.name "resume-sync-bot"
+          git config user.email "actions@github.com"
+          git add resume.pdf
+          git commit -m "[GitHub Actions] Sync resume from Overleaf" || exit 0
+          git push
