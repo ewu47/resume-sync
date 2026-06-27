@@ -1,4 +1,4 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10.5pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -13,45 +13,37 @@
 \usepackage{tabularx}
 \input{glyphtounicode}
 
-
-%----------FONT OPTIONS----------
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1 \vspace{-3pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
@@ -70,39 +62,34 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \renewcommand{\labelitemi}{$\bullet$}
 \renewcommand{\labelitemii}{$\bullet$}
-\renewcommand{\labelitemiii}{$\bullet$}
+
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
     \textbf{\Huge \scshape Eddie Wu} \\ \vspace{1pt}
-    \small \href{mailto:emwu@uchicago.edu}{\underline{emwu@uchicago.edu}} $|$ 
+    \small \href{mailto:emwu@uchicago.edu}{\underline{emwu@uchicago.edu}} $|$
     \href{https://www.linkedin.com/in/edward-minghao-wu/}{\underline{LinkedIn}} $|$
-    \href{https://github.com/ewu47} 
-    {\underline{GitHub}} $|$
-    \href{https://eddiemwu.com} 
-    {\underline{eddiemwu.com}}
+    \href{https://github.com/ewu47}{\underline{GitHub}} $|$
+    \href{https://eddiemwu.com}{\underline{eddiemwu.com}}
 \end{center}
-
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {The University of Chicago}{Chicago, IL}
-      {B.S. Computer Science, B.A. Statistics}{Sep 2024 -- Jun 2028}
+      {B.S. Computer Science, B.A. Statistics $|$ GPA: 3.6/4.0}{Sep 2024 -- Jun 2028}
       \resumeItemListStart
-        \resumeItem{\textbf{Relevant Coursework:} Theory of Algorithms, Databases, Systems Programming, Discrete Mathematics, Numerical Linear Algebra, Applied Regression Analysis}
-        \resumeItem{\textbf{Financial Markets Program:} Selective three-year program focused on quantitative finance acumen through experiential workshops, mentorship, and coursework at Chicago Booth.}
-        \resumeItem{\textbf{Involvement:} Maroon Capital (Analyst), Sports Analytics Group (WebMaster), Maroon Capital Ventures (Associate Partner), Algo Group, Kappa Theta Pi Tech Fraternity, College IT (Part-Time Computer Assistant)}
+        \resumeItem{\textbf{Financial Markets Program:} Selective three-year program focused on quantitative finance acumen through
+experiential workshops, mentorship, and coursework at Chicago Booth.}
+        \resumeItem{\textbf{Involvement}: Maroon Capital (Analyst), Sports Analytics Group (WebMaster), Maroon Capital Ventures
+(Associate Partner), Algo Group, Kappa Theta Pi Tech Fraternity, College IT (Part-Time Computer Assistant)}
+        \resumeItem{\textbf{Relevant Coursework:} Theory of Algorithms, Databases, Systems Programming, Discrete Mathematics, Numerical Linear Algebra, Applied Regression Analysis, Computer Science I \& II }
       \resumeItemListEnd
   \resumeSubHeadingListEnd
-
 
 %-----------EXPERIENCE-----------
 \section{Professional Experience}
@@ -110,80 +97,95 @@
 
     \resumeSubheading
       {SAS}{Cary, NC}
-      {Incoming Software Developer and Testing Intern}{May 2026 -- Aug 2026}
+      {Software Developer Intern --- Flow Team}{May 2026 -- Aug 2026}
       \resumeItemListStart
-        \resumeItem{Incoming intern on the Flow Team, developing low-code data pipeline features for SAS Studio on SAS Viya.}
-        \resumeItem{Will contribute to the full SDLC using React, TypeScript, and Go within an agile/scrum development environment.}
+        \resumeItem{Built and shipped diagram grid features for data flows in SAS Data and AI Studio within an agile/scrum environment.}
+        \resumeItem{Implemented gridline, snap-to-grid, and alignment guide logic in \textbf{React}/\textbf{TypeScript} using the \textbf{GoJS} diagram library.}
+        \resumeItem{Refactored diagram utilities into a reusable \textbf{TypeScript} component library, removing redundant logic across the codebase.}
+        \resumeItem{Built Jest unit tests covering UI logic across all modified components, achieving \textbf{90\%+} coverage within a CI/CD pipeline.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {MergeWorks}{Remote}
+      {AI Agent Fellow (Part-Time)}{Apr 2026 -- Jul 2026}
+      \resumeItemListStart
+        \resumeItem{Built a production AI agent pipeline with n8n orchestration, GPT-4.1 function calling, and Google Sheets as a data layer.}
+        \resumeItem{Engaged in weekly cohort meetings covering tool use, multi-agent orchestration, structured outputs, and HITL patterns}
+        \resumeItem{Fully engineered and built the UI dashboard that clients can interact with utilizing n8n webhooks for realtime inventory. }
+        \resumeItem{Delivered an end-to-end AI Human-in-the-loop inventory system for clients reducing manual labor time by \textbf{75\%}.}
       \resumeItemListEnd
 
     \resumeSubheading
       {North Carolina Football Club}{Cary, NC}
-      {Part-Time Data Analyst}{Jul 2025 -- Oct 2025}
+      {Data Analyst (Part-Time)}{Jul 2025 -- Oct 2025}
       \resumeItemListStart
-       \resumeItem{Ingested and processed 30,000+ total StatSports GPS entries for 25+ professional athletes using \textbf{Python} and \textbf{R}.}
-       \resumeItem{Built a \textbf{PostgreSQL} database to centralize and query player performance metrics across training and matches.}
-       \resumeItem{Delivered weekly \textbf{Plotly} and \textbf{ggplot2} visualizations to coaching staff, reducing manual reporting time by \textbf{80\%}.}
+        \resumeItem{Cut coaching staff manual reporting time by 80\% via weekly \textbf{Plotly}/\textbf{ggplot2} dashboards; pipeline remains in production.}
+        \resumeItem{Built a \textbf{PostgreSQL} database centralizing performance metrics for 25+ professional athletes across training and matches.}
+        \resumeItem{Ingested 30,000+ StatSports GPS entries in \textbf{Python}/\textbf{R}, surfacing load and recovery trends for coaching decisions.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
+
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Pulse} $|$ \emph{Rust, React, TypeScript, Docker}}{\textit{Jan 2026 - Present}}
+    \resumeProjectHeading
+          {\textbf{Make Twenty Four} $|$ \emph{React, TypeScript, Vite, Supabase, Tailwind CSS}}{\textit{Apr 2026 -- Present}}
           \resumeItemListStart
-            \resumeItem{Built a menu bar app with \textbf{Tauri} (\textbf{Rust + React/TypeScript}) featuring focus timers and system controls.}
-            \resumeItem{Engineered a \textbf{Rust} state machine for automated focus cycles, timer persistence, and multi-window synchronization}
-           \resumeItem{Implemented system-level app/website blocking for consistency and macOS notification suppression.}
-            \resumeItem{\textbf{Dockerized} CI builds for Linux packaging, standardizing native dependencies and release reliability.}
+            \resumeItem{Designed and built a full-stack real-time math puzzle game (solo, timed, 1v1) with ELO ratings and friend challenges.}
+            \resumeItem{Engineered a custom \textbf{TypeScript} game engine: recursive solver, seeded puzzle generation, undo logic, and multiple modes.}
+            \resumeItem{Implemented live 1v1 multiplayer via \textbf{Supabase Realtime}: ELO matchmaking, room codes, score sync, and reconnects.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Swarm Wallet} $|$ \emph{TypeScript, React, Node.js} $|$
+          \emph{Top 3 Inference Track --- Uncommon Hacks}}{\textit{May 2026}}
+          \resumeItemListStart
+            \resumeItem{AI shopping platform launching parallel browser agents across 6 live retailers, reducing price-ranked search time by 60\%.}
+            \resumeItem{Orchestrated multi-agent pipeline with \textbf{Stagehand} for structured data extraction; streamed agent status via \textbf{WebSocket}.}
+            \resumeItem{Integrated \textbf{Snowflake} for persistent search memory: price history and semantic routing from past queries.}
+            \resumeItem{Integrated \textbf{Wafer} inference API to serve open-source LLMs across agents, cutting inference cost vs. proprietary APIs.}
+
           \resumeItemListEnd
     \resumeProjectHeading
-          {\textbf{Adaptive ATR Breakout Trading Bot} $|$ \emph{Python, Alpaca API, Pandas}}{\textit{January 2026 - March 2026}}
-          \resumeItemListStart
-            \resumeItem{Developed an adaptive ATR breakout strategy with dynamic volatility-adjusted multipliers (z-score scaling).}
-            \resumeItem{Deployed across AAPL and BTC via Alpaca API with Kelly Criterion sizing for risk-optimal allocation.}
-            \resumeItem{Identified overfitting in backtested results, analyzed sources of look-ahead bias and data leakage.}
+        {\textbf{Pulse} $|$ \emph{Rust, React, TypeScript, Tauri, Docker}}{\textit{Jan 2026 -- April 2026}}
+        \resumeItemListStart
+          \resumeItem{Built a cross-platform menu bar app with \textbf{Tauri} (\textbf{Rust} + React/TypeScript) for focus session management.}
+          \resumeItem{Engineered a \textbf{Rust} state machine handling focus cycle automation, timer persistence, and window state synchronization.}
+          \resumeItem{Implemented system-level app/website blocking and macOS notification suppression via native OS APIs.}
+          \resumeItem{Built a \textbf{GitHub Actions} CI pipeline using \textbf{Docker Buildx} with layer caching to cross-compile Tauri/Rust to Linux.}
         \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Divvy Data Analysis} $|$ \emph{PostgreSQL, SQL, React, TypeScript, Tableau}}{\textit{Jun 2025}}
-          \resumeItemListStart
-            \resumeItem{Managed and queried over \textbf{5,000,000 records} of Chicago Divvy bike trip data using a \textbf{PostgreSQL} database.}
-            \resumeItem{Developed an interactive front-end \href{https://ewu47.github.io/Wu-Viz/}{\underline{website}} using \textbf{React} and \textbf{TypeScript} to visualize usage findings.}
-            \resumeItem{Conducted extensive ETL processes to standardize raw trip data for seasonal trend analysis.}
-          \resumeItemListEnd
 
-      
     \resumeSubHeadingListEnd
 
 %-----------LEADERSHIP-----------
 \section{Leadership \& Activities}
   \resumeSubHeadingListStart
-    \resumeSubheading
-        {University of Chicago Sports Analytics Group}{Chicago, IL}
-        {Webmaster}{Dec 2025 -- Present}
-        \resumeItemListStart
-            \resumeItem{Solely developed the official organization \href{https://www.uchicagosportsanalytics.com}{\underline{website}} with TypeScript/React, deployed on Vercel.}
-        \resumeItemListEnd
-    \resumeSubheading
-      {UChicago Varsity Men's Soccer}{Chicago, IL}
-      {NCAA Division III Student-Athlete}{Aug 2024 -- Present}
+      \resumeSubheading
+      {University of Chicago Sports Analytics Group}{Chicago, IL}
+      {Webmaster}{Dec 2025 -- Present}
       \resumeItemListStart
-        \resumeItem{Earned All-American 4th Team, All-Region 1st Team, All-Conference 1st Team, and All-District academic honors.}
-        \resumeItem{Committing 25+ hours/week while being a leadership council member and the Order of the C representative.}
+        \resumeItem{Solely developed the official organization website with 400+ page visits built with \textbf{TypeScript}/\textbf{React}, deployed on Vercel.}
       \resumeItemListEnd
-    
+    \resumeSubheading
+      {University of Chicago Varsity Men's Soccer}{Chicago, IL}
+      {NCAA DIII Student-Athlete $|$ All-American 4th Team, All-Region 1st Team, All-Conference 1st Team}{Aug 2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{One of $\sim$50 DIII players nationally to earn All-American honors while committing 25+ hrs/week to training and competition alongside full coursework.}
+        \resumeItem{Serve on team leadership council and Order of the C representative; help coordinate student-athlete initiatives.}
+      \resumeItemListEnd
+      
   \resumeSubHeadingListEnd
 
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills \& Interests}
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, TypeScript, JavaScript, SQL, Rust, C, R, HTML/CSS} \\
-     \textbf{Frameworks/Tools}{: Git, React, Pandas, NumPy, scikit-learn, Docker, AWS} \\
-     \textbf{Databases}{: PostgreSQL, MongoDB, Supabase} \\
-     \textbf{Interests}{: Music Producer, Chess, Video Editing, Watching Sports}
+     \textbf{Languages}{: Python, TypeScript, JavaScript, SQL, R, C, HTML/CSS} \\
+     \textbf{Frameworks \& Tools}{: React, Next.js, Node.js, Tauri, n8n, Browserbase, Stagehand, Pandas, NumPy, Docker, Git, AWS} \\
+     \textbf{Databases}{: PostgreSQL, Supabase, Snowflake, MongoDB} \\
+     \textbf{AI/ML}{: HuggingFace Transformers, PyTorch, scikit-learn, RAG, Claude/OpenAI APIs} \\
+     \textbf{Interests}{: Music Production, Chess, Video Editing}
     }}
  \end{itemize}
 
-%-------------------------------------------
 \end{document}
